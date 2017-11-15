@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');  
 var PetSchema = new mongoose.Schema({  
-  name: String,
+  username: String,
   email: String,
   password: String,
   phone: Number,

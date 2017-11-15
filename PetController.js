@@ -8,7 +8,7 @@ var Pet = require('./Pet');
 // CREATES A NEW PET
 router.post('/', function (req, res) {
     Pet.create({
-			name: req.body.name,
+			username: req.body.username,
 			email: req.body.email,
 			password: req.body.password,
 			phone: req.body.phone,
@@ -44,7 +44,7 @@ router.get('/:id', function (req, res) {
 router.delete('/:id', function (req, res) {
     Pet.findByIdAndRemove(req.params.id, function (err, pet) {
         if (err) return res.status(500).send("There was a problem deleting the pet.");
-        res.status(200).send("Pet "+ pet.name +" was deleted.");
+        res.status(200).send("Pet "+ pet.username +" was deleted.");
     });
 });
 
